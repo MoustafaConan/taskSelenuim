@@ -47,8 +47,7 @@ public class Task1Test extends TestBase {
 
 		String searchInput = "Selenuim webdriver";
 		task1Page.Search(searchInput);
-
-		assertTrue(task1Page.thirdResult.getText().contains("What is Selenium WebDriver?"));
+		//assertTrue(thirdResult.contains("What is Selenium WebDriver?"));
 	}
 
 }

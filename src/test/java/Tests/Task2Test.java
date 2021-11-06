@@ -24,6 +24,7 @@ public class Task2Test  extends TestBase {
 	
 	@AfterMethod
 	public void results(Method method,ITestResult result) throws Exception {
+		// Commit last time
 		if(result.getStatus()==ITestResult.SUCCESS) {
 			logger.log(LogStatus.PASS,"Test Passed");
 		    String screenshotPath = Utils.getScreenShot(driver, result.getName());
