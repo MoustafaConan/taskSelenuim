@@ -22,6 +22,7 @@ public class Task1Test extends TestBase {
 	
 	@AfterMethod
 	public void results(Method method,ITestResult result) throws Exception {
+		//test
 		if(result.getStatus()==ITestResult.SUCCESS) {
 			logger.log(LogStatus.PASS,"Test Passed");
 		     String screenshotPath = Utils.getScreenShot(driver, result.getName());
