@@ -10,6 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Task3Page extends PageBase {
 
 	public Task3Page(WebDriver driver) {
@@ -36,7 +38,7 @@ public class Task3Page extends PageBase {
 		dynamicLink.click();
 		example2.click();
 		startBtn.click();
-		WebDriverWait wait = new WebDriverWait(driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(helloWorld));
 		
 	}

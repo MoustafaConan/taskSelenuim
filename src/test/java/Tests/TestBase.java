@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import java.time.Duration;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -28,7 +29,7 @@ public class TestBase {
 		
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 	}
 	
@@ -36,7 +37,7 @@ public class TestBase {
 	public void tearDown() {
 		
 		extent.flush();
-		driver.get(System.getProperty("user.dir")+"\\extentReport.html");
+		//driver.get(System.getProperty("user.dir")+"\\extentReport.html");
 
 //		driver.close();
 

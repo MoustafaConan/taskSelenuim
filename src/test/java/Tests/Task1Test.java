@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
+import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -17,7 +18,8 @@ public class Task1Test extends TestBase {
 
 	@BeforeMethod
 	public void setUp(Method method) {
-		logger = extent.startTest(method.getName());	
+
+		logger = extent.startTest(method.getName());
 	}
 	
 	@AfterMethod
@@ -45,9 +47,10 @@ public class Task1Test extends TestBase {
 		driver.get("https://www.google.com/");
 		task1Page = new Task1Page(driver);
 
-		String searchInput = "Selenuim webdriver";
+		String searchInput = "Selenium webdriver";
 		task1Page.Search(searchInput);
-		//assertTrue(thirdResult.contains("What is Selenium WebDriver?"));
+		WebElement thirdResult= task1Page.thirdResult;
+		assertTrue(thirdResult.getText().contains("What is Selenium WebDriver?"));
 	}
 
 }
