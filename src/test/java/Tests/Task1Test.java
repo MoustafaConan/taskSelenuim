@@ -42,15 +42,12 @@ public class Task1Test extends TestBase {
 	}
 	@Test
 	public void test_1() {
-
-		//ExtentTest test = extent.createTest("Verify the third result in google");
 		driver.get("https://www.google.com/");
 		task1Page = new Task1Page(driver);
 
 		String searchInput = "Selenium webdriver";
-		task1Page.Search(searchInput);
-		WebElement thirdResult= task1Page.thirdResult;
-		assertTrue(thirdResult.getText().contains("What is Selenium WebDriver?"));
+		String thirdResult = task1Page.Search(searchInput);
+		assertTrue(thirdResult.contains("What is Selenium WebDriver?"));
 	}
 
 }
