@@ -15,16 +15,15 @@ public class Task1Page extends PageBase {
 
 	public Task1Page(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
-	
+
 	@FindBy(name="q")
 	WebElement searchTxtBox;
 	
 	@FindBy(name="btnK")
 	WebElement searchBtn;
 	
-	@FindBy(xpath="//*['tF2Cxc']/a/h3/span")
+	@FindBy(xpath="//*['tF2Cxc']/a/h3")
 	List<WebElement> resultObject;
 
 	public String  Search(String searchInput) {
@@ -33,7 +32,8 @@ public class Task1Page extends PageBase {
 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(resultObject.get(0)));
-		String thirdResult = resultObject.get(6).getText();
+		String thirdResult = resultObject.get(2).getText();
+		System.out.println(thirdResult);
 		return thirdResult;
 
 	}
