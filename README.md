@@ -1,7 +1,7 @@
 # taskSelenuim
 
-This is a repo of the three tasks 
-using Maven, Page object model , TestNG 
+This is a repo of the three GUI tasks 
+using Maven, Data Driven Test, Page object model , TestNG  
 
 
 Web GUI Test Automation:
