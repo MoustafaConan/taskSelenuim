@@ -3,8 +3,6 @@ package Pages;
 import java.time.Duration;
 import java.util.List;
 
-import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,10 +17,10 @@ public class Task1Page extends PageBase {
 
 	@FindBy(name="q")
 	WebElement searchTxtBox;
-	
+
 	@FindBy(name="btnK")
 	WebElement searchBtn;
-	
+
 	@FindBy(xpath="//*['tF2Cxc']/a/h3")
 	List<WebElement> resultObject;
 
@@ -35,8 +33,7 @@ public class Task1Page extends PageBase {
 		String thirdResult = resultObject.get(2).getText();
 		System.out.println(thirdResult);
 		return thirdResult;
-
 	}
-	
+
 
 }
