@@ -24,11 +24,13 @@ public class Task2Test extends TestBase {
     public void img_has_been_uploaded_successfully() throws IOException {
 
         task2Page = new Task2Page(driver);
+        String URL = prop.getProperty("task2URL");
+        driver.get(URL);
 
-        driver.get("https://the-internet.herokuapp.com/");
-        String imageName =prop.getProperty("imageName") ;
+        String imageName = prop.getProperty("imageName");
         String imagePath = CurrentPath + ("\\Uploads\\") + imageName;
         task2Page.uploadImage(imagePath);
+
         assertTrue(task2Page.Success.isDisplayed());
 
     }

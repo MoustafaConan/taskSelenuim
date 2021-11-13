@@ -26,8 +26,11 @@ public class Task3Test extends TestBase {
     public void element_is_loaded() throws IOException {
         //ExtentTest test= extent.createTest("element is loaded");
         task3Page = new Task3Page(driver);
-        driver.get("https://the-internet.herokuapp.com/");
+        String URL = prop.getProperty("task3URL");
+        driver.get(URL);
+
         task3Page.gotoexample2();
+
         assertEquals(prop.getProperty("ConfirmMessage"), task3Page.helloWorld.getText());
     }
 }

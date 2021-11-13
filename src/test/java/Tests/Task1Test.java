@@ -17,14 +17,15 @@ public class Task1Test extends TestBase {
 
     Task1Page task1Page;
 
-
     @Test
     public void test_1() {
-        driver.get("https://www.google.com/");
+        String URL = prop.getProperty("task1URL");
+        driver.get(URL);
         task1Page = new Task1Page(driver);
 
         String searchInput = prop.getProperty("searchData");
         String thirdResult = task1Page.Search(searchInput);
+
         assertTrue(thirdResult.contains("What is Selenium WebDriver?"));
     }
 }
