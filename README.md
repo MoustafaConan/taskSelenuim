@@ -5,10 +5,11 @@ This is a repo of the three GUI tasks From Terkwaz
 using Maven, Data Driven Test, Page object model , TestNG  
 
 **INTRO **
-Testing
+
 This project is implemented using Page Object Model,under this model, for each web page in the application, there should be a corresponding Page Class This Page class will identify the WebElements of that web page and also contains Page methods which perform operations on those WebElements.There is a clean separation between test code and page specific code. for each web page there is a corresponding test page that can perform assertions on the website page.
 
 This is a maven project you must download maven from marketplace to use it 
+
 Steps to use the project:
 1. Download maven from marketplace
 2. clone the project or download it 
